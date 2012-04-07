@@ -1,0 +1,31 @@
+== Rails Bootstrap
+
+This barebone rails app includes 
+* css styling from https://github.com/twitter/bootstrap
+* basic authentication from devise and OmniAuth.
+* facebook oauth from omniauth-facebook.
+
+Requirements:
+* It uses mysql database as default orm.
+* rails 3.2.3
+
+== Install
+
+* git clone this repository.
+* copy config/database.yml.sample to database.yml
+* copy config/facebook.yml.sample to facebook.yml
+* bundle install
+* rake db:migrate
+* rails s
+
+
+== Facebook
+If you want to authenticate against facebook. 
+
+* create app in facebook first. https://developers.facebook.com/apps 
+* then set app id and secret values in config/facebook.yml
+
+== Reference
+http://twitter.github.com/bootstrap/
+https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
+

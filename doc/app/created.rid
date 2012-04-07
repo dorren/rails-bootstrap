@@ -1,0 +1,7 @@
+Mon, 02 Apr 2012 23:47:44 -0400
+app/helpers/application_helper.rb	Sun, 01 Apr 2012 22:07:19 -0400
+app/controllers/welcome_controller.rb	Sun, 01 Apr 2012 22:34:27 -0400
+app/models/user.rb	Mon, 02 Apr 2012 22:13:36 -0400
+app/helpers/welcome_helper.rb	Sun, 01 Apr 2012 22:33:19 -0400
+app/controllers/application_controller.rb	Mon, 02 Apr 2012 23:30:16 -0400
+doc/README_FOR_APP	Sun, 01 Apr 2012 22:07:19 -0400

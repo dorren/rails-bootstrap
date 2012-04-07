@@ -1,0 +1,22 @@
+<div style="margin:auto; width: 50%">
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <a class="close" data-dismiss="alert">×</a>
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert alert-error">
+    <a class="close" data-dismiss="alert">×</a>
+    <%= flash[:error] %>
+  </div>
+<% end %>
+
+<%# devise puts messages in :alert %>
+<% if flash[:alert] %>
+  <div class="alert alert-error">
+    <a class="close" data-dismiss="alert">×</a>
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+</div>

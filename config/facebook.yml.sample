@@ -1,0 +1,14 @@
+development:
+  app_id: "12345"
+  app_secret: "123456abcdefg"
+  scope: "email"
+
+test:
+  app_id:
+  app_secret:
+  scope:
+
+production:
+  app_id:
+  app_secret:
+  scope:

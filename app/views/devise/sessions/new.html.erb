@@ -1,0 +1,42 @@
+<div class="devise-container" style="float:left; margin:100px 10px 10px 300px; width:300px">
+  <h2>Sign in</h2>
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email %></div>
+
+    <div><%= f.label :password %><br />
+    <%= f.password_field :password %></div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%>
+
+    <div><%= f.submit "Sign in" %></div>
+  <% end %>
+</div>
+
+<div class="devise-container" style="float:left; margin:140px 50px; width:300px">
+  <p>Login via omniauth-facebook</p>
+  <%= link_to "Sign in with Facebook", omniauth_authorize_path(:user, :facebook), :class => "btn btn-primary" %>
+
+  
+  <hr/>
+  <%= render :partial => 'shared/facebook_js' %>
+  <p>Login via Facebook jssdk </p>
+  <%= link_to "Sign in via Facebook dialog", '#', :class => "btn btn-primary", :id => "fb_login_btn" %>
+
+  <script>
+    $(function() {
+      $('#fb_login_btn').click(function(e) {
+        e.preventDefault();
+
+        FB.login(function(response) {
+          if (response.authResponse) {
+            window.location = '/users/auth/facebook/callback';
+          }
+        }, {scope: '<%= facebook_config["scope"] %>'});
+      });
+    });
+  </script>
+</div>
