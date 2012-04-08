@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:user) { Factory.create :user }
+  
+  it "should not create user with same email" do
+    lambda {
+      user2 = Factory.create :user
+    }.should raise_error ActiveRecord::RecordInvalid, "Validation failed: Email has already been taken"
+  end
 end

@@ -40,4 +40,7 @@ gem 'jquery-rails'
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
   gem 'ruby-debug'
+  gem "factory_girl", "<3.0.0"  # if you're on ruby 1.9.2, feel free to remove version limit.
+  gem "factory_girl_rails", "<3.0.0"
+  gem "database_cleaner"
 end
